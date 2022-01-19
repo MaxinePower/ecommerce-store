@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $tertiary;
+    margin-bottom: 90px;
+
+    .headerImgContainer {
+        width: 45%;
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
+    .headerContent {
+        width: 55%;
+        .contentContainer {
+            margin: 0 auto;
+            width: 65%;
+        }
+    }
+}
