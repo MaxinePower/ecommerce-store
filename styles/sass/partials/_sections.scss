@@ -128,6 +128,7 @@ main {
 .guarantees {
     background-color: $quaternary;
     position: relative;
+    text-align: center;
     &::before {
         content: '';
         background-image: url(../assets/wave-3.svg);
@@ -135,6 +136,7 @@ main {
         background-color: $quaternary;
         position: absolute;
         background-position: top center;
+        background-repeat: repeat-x;
         top: -60px;
         left: 0;
         right: 0;
@@ -142,7 +144,9 @@ main {
         height: 3rem;
     }
 }
-
+h5 {
+    margin-bottom: 60px;
+}
 .shopOptions {
     display: flex;
     flex-direction: row;

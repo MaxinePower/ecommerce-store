@@ -321,6 +321,11 @@ p.discountedPrice {
 p.newsletterCopy {
   font-size: 0.8rem;
 }
+p.valueTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
 
 ul, li, a, input {
   padding: 0;
@@ -564,6 +569,34 @@ header .headerContent .contentContainer {
   width: 65%;
 }
 
+.contactHeader {
+  background-color: #fff5f5;
+  padding-top: 120px;
+}
+.contactHeader .contactContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.contactHeader::after {
+  content: "";
+  background-image: url(../assets/wave.svg);
+  background-size: 100% 150px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 150px;
+}
+
 main section {
   margin-bottom: 90px;
 }
@@ -718,6 +751,7 @@ main section {
 .guarantees {
   background-color: #fff5f5;
   position: relative;
+  text-align: center;
 }
 .guarantees::before {
   content: "";
@@ -725,11 +759,16 @@ main section {
   background-color: #fff5f5;
   position: absolute;
   background-position: top center;
+  background-repeat: repeat-x;
   top: -60px;
   left: 0;
   right: 0;
   background-size: 100% 60px;
   height: 3rem;
+}
+
+h5 {
+  margin-bottom: 60px;
 }
 
 .shopOptions {
@@ -747,6 +786,111 @@ main section {
 .guaranteeContainer {
   width: calc(25% - 10px);
   margin: 5px;
+}
+
+.mapFormContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.mapFormContainer .map {
+  width: 50%;
+}
+.mapFormContainer .map iframe {
+  width: 100%;
+}
+
+.contactForm {
+  width: calc(50% - 70px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 70px;
+}
+
+input, textarea {
+  padding: 0 0 10px 5px;
+  margin-bottom: 40px;
+  border: none;
+  font-family: "Jakarta Sans";
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #084b6d;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  opacity: 1;
+  line-height: 1.2rem;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #084b6d;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  opacity: 1;
+  line-height: 1.2rem;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #084b6d;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  opacity: 1;
+  line-height: 1.2rem;
+}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: #084b6d;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  opacity: 1;
+  line-height: 1.2rem;
+}
+input::placeholder, textarea::placeholder {
+  color: #084b6d;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  opacity: 1;
+  line-height: 1.2rem;
+}
+input:focus, input:hover, textarea:focus, textarea:hover {
+  outline: none;
+  border-bottom: 1px solid #084b6d;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+
+textarea {
+  border: none;
+  border-bottom: 1px solid #eee;
+  min-height: 130px;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  border-bottom: 1px solid #eee;
+  font-family: "Jakarta Sans";
+  color: #084b6d;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  background-image: url(../assets/caret-down-solid.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 95% center;
+}
+select option {
+  font-family: sans-serif;
 }
 
 footer {
@@ -837,10 +981,32 @@ footer .social i:hover, footer .social i:focus {
 
 @media (max-width: 1000px) {
   /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
+  .guarantees .shopOptions {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .guarantees .guaranteeContainer {
+    width: calc(45% - 40px);
+    margin: 0 20px 40px 20px;
+  }
 }
 @media (max-width: 800px) {
   /* all of our styles for TABLET devices will go within this breakpoint */
 }
 @media (max-width: 500px) {
   /* all of our styles for MOBILE devices will go within this breakpoint */
+  .guarantees .shopOptions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .guarantees .guaranteeContainer {
+    width: 85%;
+    margin: 0 0px 50px 0px;
+  }
 }
