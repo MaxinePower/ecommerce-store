@@ -597,6 +597,7 @@ main section {
 .productContainer img {
   width: calc(100% - 48px);
   margin: 24px;
+  border-radius: 5%;
 }
 
 .play {
